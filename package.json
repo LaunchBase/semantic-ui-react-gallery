@@ -1,0 +1,64 @@
+{
+  "name": "semantic-ui-react-gallery",
+  "version": "0.1.0",
+  "description": "plug-and-play image gallery built with and for Semantic UI React",
+  "main": "dist/index.js",
+  "scripts": {
+    "start:dev": "webpack-dev-server",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaunchBase/semantic-ui-react-gallery.git"
+  },
+  "auto-changelog": {
+    "output": "CHANGELOG.md",
+    "template": "keepachangelog",
+    "unreleased": true,
+    "commitLimit": false
+  },
+  "keywords": [
+    "semantic",
+    "react",
+    "gallery",
+    "image"
+  ],
+  "author": "Thomas Hewett @CalmArms <thomas.hewett@launchbase.solutions>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LaunchBase/semantic-ui-react-gallery/issues"
+  },
+  "homepage": "https://github.com/LaunchBase/semantic-ui-react-gallery#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.46",
+    "@babel/core": "^7.0.0-beta.46",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.46",
+    "@babel/plugin-syntax-class-properties": "^7.0.0-beta.46",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0-beta.46",
+    "@babel/plugin-transform-runtime": "^7.0.0-beta.46",
+    "@babel/preset-env": "^7.0.0-beta.46",
+    "@babel/preset-flow": "^7.0.0-beta.46",
+    "@babel/preset-react": "^7.0.0-beta.46",
+    "@babel/runtime": "^7.0.0-beta.46",
+    "auto-changelog": "^1.8.0",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^8.0.0-beta.0",
+    "babel-plugin-import": "^1.7.0",
+    "css-loader": "^1.0.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.19.1",
+    "eslint-plugin-react": "^7.8.2",
+    "file-loader": "^1.1.11",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "semantic-ui-css": "^2.3.3",
+    "semantic-ui-react": "^0.82.2",
+    "style-loader": "^0.22.1",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.15",
+    "webpack-dev-server": "^3.1.3"
+  }
+}
