@@ -1,23 +1,25 @@
 .inner
 {
     box-sizing: border-box;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
+    max-width: 1180px;
     display: grid;
     gap: 1em;
     grid-template-columns: repeat(11, 1fr);
 }
 
-.header
+.close
 {
-
+    position: absolute;
+    top: 1em;
+    right: 1em;
 }
 
 .gutter
 {
+    width: 80px;
     align-self: center;
-    display: block;
-    width: 100px;
 }
 
 .leftGutter:extend(.gutter)
@@ -34,66 +36,69 @@
 
 .activeImage
 {
+    height: ~'calc(100vh - 4em - 150px)';
     grid-column-start: 2;
     grid-column-end: 12;
-
-    padding-left: 40px;
-    padding-right: 40px;
-
-    height: ~'calc(100vh - 250px - 3em)';
-
-    overflow: hidden;
-
-    margin: 0 auto;
-
     justify-content: center;
     align-items: center;
     display: flex;
+    padding-top: 1em;
 
     img
     {
-        max-width: 75vw;
         max-height: 100%;
     }
+}
+
+.detail
+{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 13;
 }
 
 .carousel
 {
     box-sizing: border-box;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    position: relative;
+    height: 150px;
+    width: 100%;
+    grid-row-start: 3;
+    grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: 13;
-    
-    padding: 1em 1em 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
 
-    max-height: 200px;
-    min-height: 150px;
+.carousel__inner
+{
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
 
-    overflow: hidden;
-    display: flex;
-    flex-wrap: nowrap;
-
-    img
-    {
-        max-height: 100%;
-        border: 2px solid transparent;
-        cursor: pointer;
-        flex-shrink: 0;
-
-        &:not(:first-child)
-        {
-            margin-left: 1em;
-        }
-
-        &:hover
-        {
-            border-color: rgba(255, 255, 255, 0.5);
-        }
+    > img:not(:first-child)
+    {   
+        margin-left: 1em;
     }
 }
 
-.carousel__activeImage
+.carousel__image
 {
-    border: 2px solid white!important;
+    max-height: 100%;
+    max-width: ~'calc((100% - 5em) / 5)';
+    border: 2px solid transparent;
+    cursor: pointer;
+
+    &:hover
+    {
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+.carousel__activeImage:extend(.carousel__image)
+{
+    border-color: rgba(255, 255, 255);
 }
